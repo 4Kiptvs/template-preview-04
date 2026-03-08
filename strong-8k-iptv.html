@@ -1,0 +1,1783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>STRONG 8K IPTV — Ultra Premium Streaming 2025</title>
+<meta name="description" content="STRONG 8K IPTV — Experience true 8K ultra premium streaming. 20,000+ live channels, 60,000+ Movies & Series. The most powerful IPTV service ever created.">
+<meta name="keywords" content="8K IPTV, Premium IPTV, best IPTV 2025, ultra HD IPTV, 8K streaming, live TV IPTV, IPTV with VOD, zero buffering IPTV">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+/* ══════════════════════════════════
+   CSS CUSTOM PROPERTIES
+══════════════════════════════════ */
+:root{
+  --gold:       #C9A84C;
+  --gold-light: #E8C96A;
+  --gold-pale:  #F5E6B8;
+  --gold-deep:  #9A7230;
+  --gold-glow:  rgba(201,168,76,0.18);
+  --gold-line:  rgba(201,168,76,0.25);
+  --white:      #FFFFFF;
+  --off:        #FAFAF7;
+  --cream:      #F7F3E8;
+  --warm:       #F0EAD6;
+  --ink:        #1A1710;
+  --ink-mid:    #3D3929;
+  --ink-soft:   #6B6450;
+  --ink-mute:   #9E9580;
+  --border:     rgba(201,168,76,0.2);
+  --shadow-g:   0 4px 24px rgba(201,168,76,0.12);
+  --shadow-gl:  0 12px 48px rgba(201,168,76,0.2);
+  --r:          12px;
+}
+
+/* ══════════════════════════════════
+   RESET & BASE
+══════════════════════════════════ */
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;font-size:16px;}
+body{
+  background:var(--white);
+  color:var(--ink);
+  font-family:'DM Sans',sans-serif;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+::-webkit-scrollbar{width:4px;}
+::-webkit-scrollbar-track{background:var(--cream);}
+::-webkit-scrollbar-thumb{background:var(--gold);border-radius:2px;}
+img{max-width:100%;display:block;}
+a{text-decoration:none;color:inherit;}
+
+/* ══════════════════════════════════
+   TYPOGRAPHY
+══════════════════════════════════ */
+.display{
+  font-family:'Cormorant Garamond',serif;
+  font-weight:700;
+  line-height:1.05;
+  letter-spacing:-0.01em;
+}
+.serif{font-family:'Cormorant Garamond',serif;}
+
+/* ══════════════════════════════════
+   GOLD GRADIENT UTILITY
+══════════════════════════════════ */
+.g-text{
+  background:linear-gradient(135deg,var(--gold-deep) 0%,var(--gold) 40%,var(--gold-light) 60%,var(--gold) 80%,var(--gold-deep) 100%);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+}
+.g-bg{background:linear-gradient(135deg,var(--gold-deep),var(--gold),var(--gold-light));}
+
+/* ══════════════════════════════════
+   BUTTONS
+══════════════════════════════════ */
+.btn{
+  display:inline-flex;align-items:center;gap:.55rem;
+  padding:.75rem 1.8rem;
+  border-radius:2px;
+  font-family:'DM Sans',sans-serif;
+  font-weight:600;font-size:.85rem;
+  letter-spacing:.05em;text-transform:uppercase;
+  cursor:pointer;border:none;transition:all .28s cubic-bezier(.4,0,.2,1);
+  white-space:nowrap;
+}
+.btn-gold{
+  background:linear-gradient(135deg,var(--gold-deep),var(--gold),var(--gold-light));
+  color:var(--ink);
+  box-shadow:0 4px 20px rgba(201,168,76,.3);
+}
+.btn-gold:hover{
+  transform:translateY(-2px);
+  box-shadow:0 8px 32px rgba(201,168,76,.45);
+  filter:brightness(1.05);
+}
+.btn-outline{
+  background:transparent;
+  color:var(--gold);
+  border:1px solid var(--gold);
+}
+.btn-outline:hover{
+  background:var(--gold-glow);
+  transform:translateY(-2px);
+}
+.btn-wa{
+  background:#25D366;
+  color:#fff;
+  box-shadow:0 4px 16px rgba(37,211,102,.25);
+}
+.btn-wa:hover{background:#1ebe5d;transform:translateY(-2px);}
+
+/* ══════════════════════════════════
+   HEADER
+══════════════════════════════════ */
+#hdr{
+  position:fixed;top:0;left:0;width:100%;z-index:1000;
+  height:68px;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 5%;
+  background:rgba(255,255,255,0.88);
+  backdrop-filter:blur(16px);
+  -webkit-backdrop-filter:blur(16px);
+  border-bottom:1px solid transparent;
+  transition:border-color .3s,box-shadow .3s;
+}
+#hdr.on{
+  border-bottom-color:var(--border);
+  box-shadow:0 2px 24px rgba(201,168,76,.08);
+}
+.logo-wrap{display:flex;align-items:center;gap:.7rem;}
+.logo-gem{
+  width:38px;height:38px;
+  background:linear-gradient(135deg,var(--gold-deep),var(--gold),var(--gold-light));
+  border-radius:6px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:.9rem;color:var(--ink);
+  box-shadow:0 2px 12px rgba(201,168,76,.3);
+}
+.logo-text{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.45rem;font-weight:700;
+  color:var(--ink);letter-spacing:.02em;
+}
+.logo-text span{color:var(--gold);}
+nav{display:flex;align-items:center;gap:2rem;}
+nav a{
+  font-size:.8rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--ink-soft);transition:color .2s;
+}
+nav a:hover{color:var(--gold);}
+.ham{display:none;background:none;border:none;cursor:pointer;padding:4px;flex-direction:column;gap:5px;}
+.ham span{display:block;width:22px;height:1.5px;background:var(--ink);transition:.3s;}
+
+/* ══════════════════════════════════
+   HERO
+══════════════════════════════════ */
+#hero{
+  min-height:100vh;
+  padding:100px 5% 60px;
+  display:flex;align-items:center;
+  background:var(--off);
+  position:relative;overflow:hidden;
+}
+/* decorative geometry */
+.hero-geo{position:absolute;pointer-events:none;}
+.geo-ring{
+  border-radius:50%;
+  border:1px solid var(--gold-line);
+}
+.gr1{width:700px;height:700px;top:50%;right:-15%;transform:translateY(-50%);}
+.gr2{width:500px;height:500px;top:50%;right:-8%;transform:translateY(-50%);}
+.gr3{width:300px;height:300px;top:50%;right:-1%;transform:translateY(-50%);}
+.geo-diag{
+  position:absolute;bottom:0;left:0;width:100%;height:2px;
+  background:linear-gradient(90deg,transparent,var(--gold),transparent);
+  opacity:.4;
+}
+.geo-corner{
+  position:absolute;top:90px;right:5%;
+  width:60px;height:60px;
+  border-top:1px solid var(--gold);
+  border-right:1px solid var(--gold);
+  opacity:.5;
+}
+.geo-corner-bl{
+  position:absolute;bottom:60px;left:5%;
+  width:40px;height:40px;
+  border-bottom:1px solid var(--gold);
+  border-left:1px solid var(--gold);
+  opacity:.5;
+}
+/* floating label */
+.hero-kicker{
+  display:inline-flex;align-items:center;gap:.6rem;
+  font-size:.72rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--gold-deep);
+  padding:.35rem 1rem;
+  border:1px solid var(--gold);
+  border-radius:1px;
+  background:rgba(201,168,76,.06);
+  margin-bottom:1.8rem;
+}
+.kicker-dot{width:5px;height:5px;border-radius:50%;background:var(--gold);animation:kpulse 2s infinite;}
+@keyframes kpulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.7)}}
+
+.hero-inner{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:5rem;
+  align-items:center;
+  max-width:1300px;
+  margin:0 auto;
+  width:100%;
+  position:relative;z-index:2;
+}
+h1.hero-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(3rem,5.5vw,5.2rem);
+  font-weight:700;
+  line-height:1.0;
+  color:var(--ink);
+  margin-bottom:1.4rem;
+}
+.hero-sub{
+  font-size:1.05rem;
+  color:var(--ink-soft);
+  line-height:1.8;
+  max-width:480px;
+  margin-bottom:2.2rem;
+}
+.hero-btns{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:2.5rem;}
+.hero-proof{display:flex;align-items:center;gap:1.8rem;flex-wrap:wrap;}
+.proof-divider{width:1px;height:32px;background:var(--border);}
+.proof-stat{text-align:center;}
+.proof-num{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.6rem;font-weight:700;
+  color:var(--gold-deep);line-height:1;
+}
+.proof-lbl{font-size:.7rem;color:var(--ink-mute);letter-spacing:.08em;text-transform:uppercase;}
+
+/* HERO VISUAL — TV Frame */
+.hero-visual{position:relative;display:flex;justify-content:center;align-items:center;}
+.tv-wrap{
+  position:relative;
+  width:100%;max-width:560px;
+}
+.tv-body{
+  background:linear-gradient(160deg,#2a2520,#1a1710);
+  border-radius:16px 16px 8px 8px;
+  padding:14px 14px 10px;
+  box-shadow:
+    0 40px 80px rgba(0,0,0,.18),
+    0 0 0 1px rgba(201,168,76,.2),
+    inset 0 1px 0 rgba(201,168,76,.15);
+  position:relative;
+}
+.tv-body::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,transparent,var(--gold),transparent);
+  border-radius:16px 16px 0 0;
+}
+.tv-screen{
+  border-radius:8px;
+  overflow:hidden;
+  aspect-ratio:16/9;
+  background:linear-gradient(145deg,#0d0f1a,#151a2e,#1a0d10);
+  position:relative;
+}
+/* screen UI */
+.scr-bg{
+  position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse 60% 50% at 30% 40%,rgba(201,168,76,.08),transparent),
+    radial-gradient(ellipse 50% 60% at 80% 60%,rgba(100,140,255,.06),transparent),
+    linear-gradient(160deg,#0c0f1c,#181220,#120c18);
+}
+.scr-ui{position:absolute;inset:0;padding:6% 6%;}
+.scr-top-bar{display:flex;justify-content:space-between;align-items:center;margin-bottom:5%;}
+.scr-logo{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(.5rem,.9vw,.85rem);
+  font-weight:700;
+  background:linear-gradient(90deg,var(--gold-deep),var(--gold-light));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  letter-spacing:.1em;
+}
+.scr-icons{display:flex;gap:clamp(3px,0.6vw,8px);}
+.scr-icon{
+  width:clamp(4px,0.8vw,8px);height:clamp(4px,0.8vw,8px);
+  border-radius:50%;background:rgba(255,255,255,.15);
+}
+.scr-icon.on{background:var(--gold);}
+.scr-featured{
+  background:linear-gradient(135deg,rgba(201,168,76,.15),rgba(100,80,20,.1));
+  border:1px solid rgba(201,168,76,.2);
+  border-radius:6px;
+  padding:4% 5%;
+  margin-bottom:4%;
+  position:relative;
+  overflow:hidden;
+}
+.scr-feat-label{
+  font-size:clamp(.35rem,.55vw,.55rem);
+  color:rgba(201,168,76,.7);
+  letter-spacing:.15em;text-transform:uppercase;
+  margin-bottom:2%;
+}
+.scr-feat-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(.6rem,1.1vw,1.1rem);
+  color:#fff;font-weight:700;
+  margin-bottom:3%;
+}
+.scr-play-btn{
+  display:inline-flex;align-items:center;gap:4px;
+  background:linear-gradient(135deg,var(--gold-deep),var(--gold));
+  color:var(--ink);
+  border-radius:2px;
+  padding:3px 8px;
+  font-size:clamp(.3rem,.5vw,.5rem);font-weight:700;letter-spacing:.1em;
+}
+.scr-8k-badge{
+  position:absolute;top:8%;right:4%;
+  background:linear-gradient(135deg,var(--gold-deep),var(--gold));
+  color:var(--ink);
+  font-size:clamp(.3rem,.55vw,.55rem);
+  font-weight:800;letter-spacing:.1em;
+  padding:2px 6px;border-radius:2px;
+}
+.scr-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(2px,0.5vw,6px);}
+.scr-thumb{
+  border-radius:4px;
+  aspect-ratio:16/9;
+  position:relative;overflow:hidden;
+}
+.st1{background:linear-gradient(135deg,#8B4513,#D2691E);}
+.st2{background:linear-gradient(135deg,#1a3a6b,#2d5fa8);}
+.st3{background:linear-gradient(135deg,#2d4a1e,#4a7a30);}
+.st4{background:linear-gradient(135deg,#5a1a1a,#9a2a2a);}
+.st5{background:linear-gradient(135deg,#1a2d5a,#0d4b7a);}
+.st6{background:linear-gradient(135deg,#4a2d1a,#8a5a30);}
+.st7{background:linear-gradient(135deg,#1a1a4a,#3a3a8a);}
+.st8{background:linear-gradient(135deg,#3a1a3a,#7a3a7a);}
+.scr-thumb::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(0,0,0,.5),transparent);
+}
+.tv-stand{
+  width:30%;margin:0 auto;
+  height:10px;
+  background:linear-gradient(180deg,#2a2520,#1a1710);
+  border-radius:0 0 4px 4px;
+}
+.tv-base{
+  width:50%;margin:0 auto;
+  height:6px;
+  background:linear-gradient(90deg,#1a1710,#2a2520,#1a1710);
+  border-radius:4px;
+  box-shadow:0 2px 8px rgba(0,0,0,.15);
+}
+/* floating badges */
+.tv-badge{
+  position:absolute;
+  background:var(--white);
+  border:1px solid var(--border);
+  border-radius:8px;
+  padding:.55rem 1rem;
+  box-shadow:var(--shadow-gl);
+  display:flex;align-items:center;gap:.6rem;
+  white-space:nowrap;
+  font-size:.78rem;font-weight:600;
+  color:var(--ink);
+  animation:tvbadge 3.5s ease-in-out infinite;
+}
+@keyframes tvbadge{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+.tvb1{top:10%;left:-10%;animation-delay:0s;}
+.tvb2{bottom:18%;left:-12%;animation-delay:.7s;}
+.tvb3{top:8%;right:-10%;animation-delay:1.2s;}
+.tvb4{bottom:22%;right:-12%;animation-delay:.4s;}
+.badge-ico{
+  width:28px;height:28px;border-radius:6px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:.75rem;color:#fff;
+}
+.bi-gold{background:linear-gradient(135deg,var(--gold-deep),var(--gold));}
+.bi-green{background:linear-gradient(135deg,#10b981,#34d399);}
+.bi-blue{background:linear-gradient(135deg,#3b82f6,#60a5fa);}
+.bi-red{background:linear-gradient(135deg,#ef4444,#f87171);}
+.badge-sub{font-size:.65rem;color:var(--ink-mute);}
+
+/* ══════════════════════════════════
+   GOLD DIVIDER
+══════════════════════════════════ */
+.gold-strip{
+  padding:52px 5%;
+  background:linear-gradient(135deg,var(--gold-deep),var(--gold),var(--gold-light),var(--gold),var(--gold-deep));
+  position:relative;overflow:hidden;
+}
+.gold-strip::before{
+  content:'';position:absolute;inset:0;
+  background:repeating-linear-gradient(90deg,rgba(255,255,255,.03) 0,rgba(255,255,255,.03) 1px,transparent 1px,transparent 60px);
+}
+.strip-inner{
+  max-width:1300px;margin:0 auto;
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:2rem;
+  position:relative;z-index:1;
+}
+.strip-stat{text-align:center;}
+.ss-num{
+  font-family:'Cormorant Garamond',serif;
+  font-size:3rem;font-weight:700;
+  color:var(--ink);line-height:1;
+  margin-bottom:.3rem;
+}
+.ss-lbl{font-size:.75rem;font-weight:600;color:rgba(26,23,16,.65);letter-spacing:.12em;text-transform:uppercase;}
+
+/* ══════════════════════════════════
+   SECTIONS COMMON
+══════════════════════════════════ */
+section{padding:90px 5%;}
+.sec-inner{max-width:1300px;margin:0 auto;}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:.6rem;
+  font-size:.72rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--gold-deep);margin-bottom:.9rem;
+}
+.eyebrow::before{content:'';display:block;width:24px;height:1px;background:var(--gold);}
+h2.sh{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(2rem,3.5vw,3rem);
+  font-weight:700;color:var(--ink);
+  line-height:1.15;margin-bottom:.8rem;
+}
+.sdesc{
+  font-size:.97rem;color:var(--ink-soft);
+  line-height:1.8;max-width:560px;margin-bottom:3rem;
+}
+
+/* ══════════════════════════════════
+   FEATURES — Alternating layout
+══════════════════════════════════ */
+#features{background:var(--off);}
+.feat-block{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:4rem;align-items:center;
+  max-width:1300px;margin:0 auto;
+}
+.feat-grid{display:flex;flex-direction:column;gap:1rem;}
+.feat-card{
+  display:flex;gap:1.2rem;align-items:flex-start;
+  padding:1.4rem 1.6rem;
+  background:var(--white);
+  border:1px solid var(--border);
+  border-radius:var(--r);
+  transition:all .3s cubic-bezier(.4,0,.2,1);
+  position:relative;overflow:hidden;
+}
+.feat-card::before{
+  content:'';position:absolute;left:0;top:0;width:2px;height:100%;
+  background:linear-gradient(180deg,var(--gold),var(--gold-light));
+  transform:scaleY(0);transform-origin:bottom;
+  transition:transform .3s;
+}
+.feat-card:hover{
+  border-color:var(--gold);
+  box-shadow:var(--shadow-gl);
+  transform:translateX(4px);
+}
+.feat-card:hover::before{transform:scaleY(1);}
+.feat-ico{
+  width:48px;height:48px;flex-shrink:0;
+  border-radius:10px;
+  background:linear-gradient(135deg,var(--cream),var(--warm));
+  border:1px solid var(--border);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.1rem;color:var(--gold-deep);
+}
+.feat-ttl{font-weight:700;font-size:.95rem;color:var(--ink);margin-bottom:.3rem;}
+.feat-txt{font-size:.83rem;color:var(--ink-soft);line-height:1.6;}
+
+.feat-showcase{
+  background:linear-gradient(160deg,var(--ink) 0%,var(--ink-mid) 100%);
+  border-radius:20px;
+  padding:2.5rem;
+  position:relative;overflow:hidden;
+  box-shadow:var(--shadow-gl);
+}
+.feat-showcase::before{
+  content:'';position:absolute;top:-60px;right:-60px;
+  width:240px;height:240px;border-radius:50%;
+  background:radial-gradient(circle,rgba(201,168,76,.15),transparent);
+}
+.fs-kicker{
+  font-size:.68rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:.7rem;
+}
+.fs-num{
+  font-family:'Cormorant Garamond',serif;
+  font-size:5rem;font-weight:700;
+  background:linear-gradient(135deg,var(--gold-deep),var(--gold),var(--gold-light));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  line-height:1;margin-bottom:.4rem;
+}
+.fs-label{color:rgba(255,255,255,.55);font-size:.9rem;margin-bottom:2rem;}
+.fs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem;}
+.fs-item{
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(201,168,76,.15);
+  border-radius:8px;padding:.9rem;text-align:center;
+}
+.fs-item i{color:var(--gold);font-size:1rem;display:block;margin-bottom:.4rem;}
+.fs-item span{font-size:.72rem;color:rgba(255,255,255,.55);}
+.feat-float-card{
+  position:absolute;bottom:-16px;right:20px;
+  background:var(--white);
+  border:1px solid var(--border);
+  border-radius:10px;
+  padding:.8rem 1.1rem;
+  box-shadow:var(--shadow-gl);
+  display:flex;align-items:center;gap:.7rem;
+}
+.ffc-ico{
+  width:36px;height:36px;border-radius:8px;
+  background:linear-gradient(135deg,var(--gold-deep),var(--gold));
+  display:flex;align-items:center;justify-content:center;
+  color:var(--ink);font-size:.85rem;
+}
+.ffc-n{font-size:1.1rem;font-weight:700;color:var(--ink);font-family:'Cormorant Garamond',serif;}
+.ffc-l{font-size:.68rem;color:var(--ink-mute);}
+
+/* ══════════════════════════════════
+   HOW IT WORKS
+══════════════════════════════════ */
+#how{background:var(--cream);}
+.how-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:1.5rem;
+  position:relative;
+}
+.how-grid::before{
+  content:'';position:absolute;
+  top:36px;left:10%;right:10%;height:1px;
+  background:linear-gradient(90deg,transparent,var(--gold),var(--gold),transparent);
+  z-index:0;opacity:.4;
+}
+.step-card{
+  background:var(--white);
+  border:1px solid var(--border);
+  border-radius:var(--r);
+  padding:2rem 1.5rem;
+  text-align:center;
+  position:relative;z-index:1;
+  transition:all .3s cubic-bezier(.4,0,.2,1);
+}
+.step-card:hover{
+  border-color:var(--gold);
+  box-shadow:var(--shadow-gl);
+  transform:translateY(-6px);
+}
+.step-num{
+  width:72px;height:72px;border-radius:50%;
+  background:linear-gradient(135deg,var(--gold-deep),var(--gold),var(--gold-light));
+  display:flex;align-items:center;justify-content:center;
+  margin:0 auto 1.2rem;
+  box-shadow:0 4px 20px rgba(201,168,76,.3);
+  font-size:1.3rem;color:var(--ink);
+}
+.step-ttl{font-weight:700;color:var(--ink);margin-bottom:.5rem;font-size:.95rem;}
+.step-txt{font-size:.82rem;color:var(--ink-soft);line-height:1.6;}
+
+/* ══════════════════════════════════
+   MOVIE SLIDER — Netflix style
+══════════════════════════════════ */
+#movies{background:var(--off);}
+.slider-outer{position:relative;}
+.slider-overflow{overflow:hidden;border-radius:4px;}
+.sl-track{
+  display:flex;gap:14px;
+  transition:transform .45s cubic-bezier(.25,.46,.45,.94);
+  will-change:transform;
+}
+.movie-card{
+  flex:0 0 155px;height:235px;
+  border-radius:10px;overflow:hidden;
+  cursor:pointer;position:relative;
+  transition:transform .3s,box-shadow .3s;
+}
+.movie-card:hover{transform:scale(1.06) translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,.2);}
+.mc-bg{width:100%;height:100%;display:flex;flex-direction:column;justify-content:flex-end;padding:.8rem;}
+.m1{background:linear-gradient(200deg,#2c1810,#8B4513,#D2691E);}
+.m2{background:linear-gradient(200deg,#0d1b3e,#1a3a6b,#2d5fa8);}
+.m3{background:linear-gradient(200deg,#1a0d10,#5a1a1a,#9a2a2a);}
+.m4{background:linear-gradient(200deg,#1a1a0d,#4a3a10,#8a6a20);}
+.m5{background:linear-gradient(200deg,#1a0d1a,#4a1a4a,#7a3a7a);}
+.m6{background:linear-gradient(200deg,#0d1a1a,#1a4a4a,#2a7a7a);}
+.m7{background:linear-gradient(200deg,#1a1a0d,#5a4a10,#9a7a20);}
+.m8{background:linear-gradient(200deg,#0d0d1a,#1a1a4a,#3a3a8a);}
+.m9{background:linear-gradient(200deg,#1a0d0d,#5a1010,#8a2020);}
+.m10{background:linear-gradient(200deg,#0d1a0d,#1a4a1a,#2a7a2a);}
+.m11{background:linear-gradient(200deg,#1a1010,#5a2020,#8a3030);}
+.m12{background:linear-gradient(200deg,#100d1a,#2a1a4a,#4a2a7a);}
+.mc-genre{font-size:.58rem;color:rgba(201,168,76,.8);text-transform:uppercase;letter-spacing:.1em;margin-bottom:.2rem;}
+.mc-title{font-family:'Cormorant Garamond',serif;font-size:.82rem;font-weight:700;color:#fff;line-height:1.2;}
+.mc-badge{
+  position:absolute;top:8px;right:8px;
+  background:linear-gradient(135deg,var(--gold-deep),var(--gold));
+  color:var(--ink);font-size:.5rem;font-weight:800;
+  letter-spacing:.1em;padding:2px 5px;border-radius:2px;
+}
+.sl-btn{
+  position:absolute;top:50%;transform:translateY(-50%);
+  width:46px;height:46px;border-radius:50%;
+  background:var(--white);border:1px solid var(--border);
+  cursor:pointer;display:flex;align-items:center;justify-content:center;
+  color:var(--gold-deep);font-size:.9rem;
+  box-shadow:var(--shadow-gl);transition:.25s;z-index:5;
+}
+.sl-btn:hover{background:linear-gradient(135deg,var(--gold-deep),var(--gold));color:var(--ink);border-color:var(--gold);}
+.sl-prev{left:-23px;}
+.sl-next{right:-23px;}
+
+/* ══════════════════════════════════
+   DEVICES
+══════════════════════════════════ */
+#devices{background:var(--white);}
+.dev-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:1.2rem;
+}
+.dev-card{
+  background:var(--off);
+  border:1px solid var(--border);
+  border-radius:var(--r);
+  padding:2rem 1rem;
+  text-align:center;
+  transition:all .3s;cursor:default;
+}
+.dev-card:hover{
+  border-color:var(--gold);
+  background:linear-gradient(135deg,var(--cream),var(--warm));
+  box-shadow:var(--shadow-g);
+  transform:translateY(-3px);
+}
+.dev-ico{
+  width:58px;height:58px;border-radius:14px;
+  background:linear-gradient(135deg,var(--gold-deep),var(--gold),var(--gold-light));
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.4rem;color:var(--ink);
+  margin:0 auto .9rem;
+  box-shadow:0 4px 16px rgba(201,168,76,.25);
+  transition:transform .3s;
+}
+.dev-card:hover .dev-ico{transform:scale(1.1) rotate(-3deg);}
+.dev-name{font-weight:700;font-size:.88rem;color:var(--ink);}
+
+/* ══════════════════════════════════
+   APPS
+══════════════════════════════════ */
+#apps{background:var(--cream);}
+.apps-rail{display:flex;gap:14px;transition:transform .45s cubic-bezier(.25,.46,.45,.94);will-change:transform;}
+.app-card{
+  flex:0 0 165px;
+  background:var(--white);border:1px solid var(--border);
+  border-radius:var(--r);padding:1.4rem 1rem;
+  text-align:center;transition:all .3s;
+}
+.app-card:hover{border-color:var(--gold);box-shadow:var(--shadow-g);transform:translateY(-4px);}
+.app-ico{
+  width:58px;height:58px;border-radius:14px;
+  margin:0 auto .8rem;
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.4rem;color:#fff;
+}
+.ai1{background:linear-gradient(135deg,#1565c0,#42a5f5);}
+.ai2{background:linear-gradient(135deg,#c62828,#ff8f00);}
+.ai3{background:linear-gradient(135deg,#6a1b9a,#ab47bc);}
+.ai4{background:linear-gradient(135deg,#00838f,#26c6da);}
+.ai5{background:linear-gradient(135deg,#2e7d32,#66bb6a);}
+.ai6{background:linear-gradient(135deg,#f57f17,#ffa000);}
+.ai7{background:linear-gradient(135deg,#880e4f,#e91e63);}
+.ai8{background:linear-gradient(135deg,#01579b,#039be5);}
+.ai9{background:linear-gradient(135deg,#4a148c,#7b1fa2);}
+.ai10{background:linear-gradient(135deg,#b71c1c,#e53935);}
+.app-name{font-weight:700;font-size:.82rem;color:var(--ink);margin-bottom:.7rem;}
+.app-btn{
+  display:inline-block;font-size:.7rem;font-weight:600;
+  padding:.35rem .9rem;border-radius:2px;
+  background:linear-gradient(135deg,var(--gold-deep),var(--gold));
+  color:var(--ink);letter-spacing:.05em;text-transform:uppercase;
+  transition:.2s;
+}
+.app-btn:hover{filter:brightness(1.1);}
+
+/* ══════════════════════════════════
+   PRICING
+══════════════════════════════════ */
+#pricing{background:var(--off);}
+.price-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:1.5rem;
+}
+.price-card{
+  background:var(--white);border:1px solid var(--border);
+  border-radius:16px;padding:2rem 1.5rem;
+  transition:all .3s cubic-bezier(.4,0,.2,1);
+  position:relative;overflow:hidden;
+}
+.price-card:hover{border-color:var(--gold);box-shadow:var(--shadow-gl);transform:translateY(-6px);}
+.price-card.hot{
+  border-color:var(--gold);
+  background:linear-gradient(160deg,var(--cream),var(--white));
+}
+.hot-tag{
+  position:absolute;top:16px;right:-30px;
+  background:linear-gradient(135deg,var(--gold-deep),var(--gold));
+  color:var(--ink);font-size:.58rem;font-weight:800;
+  letter-spacing:.1em;text-transform:uppercase;
+  padding:.28rem 2.8rem;transform:rotate(35deg);
+}
+.price-dur{
+  font-family:'Cormorant Garamond',serif;
+  font-size:2.4rem;font-weight:700;color:var(--ink);line-height:1;
+}
+.price-dur sub{font-size:.9rem;font-weight:400;color:var(--ink-mute);}
+.price-tag{
+  display:inline-block;
+  background:linear-gradient(135deg,var(--gold-deep),var(--gold));
+  color:var(--ink);font-size:.65rem;font-weight:700;
+  padding:.2rem .7rem;border-radius:2px;margin:.5rem 0 1rem;
+  letter-spacing:.08em;text-transform:uppercase;
+}
+.p-divider{height:1px;background:var(--border);margin:1rem 0;}
+.p-list{list-style:none;margin-bottom:1.5rem;}
+.p-list li{
+  display:flex;align-items:center;gap:.6rem;
+  font-size:.83rem;color:var(--ink-soft);padding:.3rem 0;
+}
+.p-list li i{color:var(--gold-deep);font-size:.72rem;}
+.btn-full{width:100%;justify-content:center;}
+
+/* ══════════════════════════════════
+   CHANNELS
+══════════════════════════════════ */
+#channels{background:var(--cream);}
+.ch-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;}
+.ch-card{
+  background:var(--white);border:1px solid var(--border);
+  border-radius:var(--r);padding:1.1rem 1.2rem;
+  display:flex;align-items:center;gap:.9rem;
+  transition:all .3s;
+}
+.ch-card:hover{border-color:var(--gold);box-shadow:var(--shadow-g);transform:translateX(3px);}
+.ch-em{
+  width:42px;height:42px;border-radius:9px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.3rem;flex-shrink:0;
+  background:linear-gradient(135deg,var(--cream),var(--warm));
+  border:1px solid var(--border);
+}
+.ch-name{font-weight:700;font-size:.85rem;color:var(--ink);}
+.ch-cnt{
+  font-size:.7rem;font-weight:600;
+  background:linear-gradient(90deg,var(--gold-deep),var(--gold));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+
+/* ══════════════════════════════════
+   TESTIMONIALS
+══════════════════════════════════ */
+#testimonials{background:var(--white);}
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;}
+.rev-card{
+  background:var(--off);border:1px solid var(--border);
+  border-radius:var(--r);padding:1.8rem;transition:all .3s;
+}
+.rev-card:hover{border-color:var(--gold);box-shadow:var(--shadow-g);}
+.rev-stars{
+  font-size:.85rem;margin-bottom:.9rem;letter-spacing:2px;
+  background:linear-gradient(90deg,var(--gold-deep),var(--gold));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+.rev-text{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.05rem;color:var(--ink-mid);
+  line-height:1.7;margin-bottom:1.3rem;font-style:italic;
+}
+.rev-meta{display:flex;align-items:center;gap:.8rem;}
+.rev-av{
+  width:40px;height:40px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-weight:700;font-size:.9rem;color:#fff;
+  background:linear-gradient(135deg,var(--gold-deep),var(--gold));
+  flex-shrink:0;
+}
+.rev-name{font-weight:700;font-size:.85rem;color:var(--ink);}
+.rev-loc{font-size:.72rem;color:var(--ink-mute);}
+
+/* ══════════════════════════════════
+   FAQ
+══════════════════════════════════ */
+#faq{background:var(--cream);}
+.faq-layout{display:grid;grid-template-columns:5fr 4fr;gap:4rem;align-items:start;}
+.faq-stack{display:flex;flex-direction:column;gap:.8rem;}
+.faq-item{
+  background:var(--white);border:1px solid var(--border);
+  border-radius:var(--r);overflow:hidden;
+}
+.faq-q{
+  padding:1.1rem 1.4rem;
+  display:flex;justify-content:space-between;align-items:center;
+  cursor:pointer;font-weight:600;font-size:.9rem;color:var(--ink);
+  transition:.2s;
+}
+.faq-q:hover{background:var(--cream);}
+.faq-q i{color:var(--gold);font-size:.8rem;transition:transform .3s;flex-shrink:0;}
+.faq-ans{max-height:0;overflow:hidden;transition:max-height .4s ease;}
+.faq-ans p{padding:.1rem 1.4rem 1.1rem;font-size:.84rem;color:var(--ink-soft);line-height:1.7;}
+.faq-item.open .faq-q{background:linear-gradient(135deg,var(--cream),var(--warm));color:var(--gold-deep);}
+.faq-item.open .faq-q i{transform:rotate(180deg);}
+.faq-item.open .faq-ans{max-height:200px;}
+.faq-aside{
+  background:linear-gradient(145deg,var(--ink),var(--ink-mid));
+  border-radius:20px;padding:2.5rem;text-align:center;
+  border:1px solid rgba(201,168,76,.2);
+  position:sticky;top:90px;
+}
+.faq-aside::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,transparent,var(--gold),transparent);
+}
+.faq-aside{position:relative;}
+.fa-ico{
+  width:64px;height:64px;border-radius:16px;
+  background:linear-gradient(135deg,var(--gold-deep),var(--gold));
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.6rem;color:var(--ink);
+  margin:0 auto 1.2rem;
+  box-shadow:0 6px 24px rgba(201,168,76,.35);
+}
+.fa-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.5rem;font-weight:700;color:#fff;
+  margin-bottom:.5rem;
+}
+.fa-sub{font-size:.85rem;color:rgba(255,255,255,.55);margin-bottom:1.5rem;line-height:1.6;}
+.fa-resp{font-size:.72rem;color:rgba(255,255,255,.35);margin-top:.9rem;}
+.fa-resp strong{color:var(--gold);}
+
+/* ══════════════════════════════════
+   CONTACT
+══════════════════════════════════ */
+#contact{background:var(--white);}
+.contact-layout{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;}
+.contact-items{display:flex;flex-direction:column;gap:1rem;}
+.c-item{
+  display:flex;align-items:center;gap:1rem;
+  padding:1.2rem 1.4rem;
+  background:var(--off);border:1px solid var(--border);
+  border-radius:var(--r);transition:.3s;
+}
+.c-item:hover{border-color:var(--gold);box-shadow:var(--shadow-g);}
+.c-ico{
+  width:46px;height:46px;border-radius:10px;
+  background:linear-gradient(135deg,var(--gold-deep),var(--gold));
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.05rem;color:var(--ink);flex-shrink:0;
+}
+.c-lbl{font-size:.7rem;color:var(--ink-mute);text-transform:uppercase;letter-spacing:.08em;}
+.c-val{font-size:.9rem;font-weight:700;color:var(--ink);}
+.contact-box{
+  background:var(--off);border:1px solid var(--border);
+  border-radius:20px;padding:3rem 2.5rem;text-align:center;
+}
+.wa-circle{
+  width:72px;height:72px;border-radius:50%;
+  background:#25D366;
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.8rem;color:#fff;
+  margin:0 auto 1.2rem;
+  box-shadow:0 8px 28px rgba(37,211,102,.25);
+}
+.cb-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.7rem;font-weight:700;color:var(--ink);margin-bottom:.5rem;
+}
+.cb-sub{font-size:.88rem;color:var(--ink-soft);margin-bottom:1.5rem;line-height:1.6;}
+.cb-note{font-size:.72rem;color:var(--ink-mute);margin-top:.9rem;}
+
+/* ══════════════════════════════════
+   TICKER
+══════════════════════════════════ */
+#ticker{
+  padding:36px 0;
+  background:var(--warm);
+  border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+  overflow:hidden;
+}
+.tick-inner{
+  display:flex;gap:48px;
+  animation:tick 22s linear infinite;
+  width:max-content;
+}
+.tick-inner:hover{animation-play-state:paused;}
+@keyframes tick{to{transform:translateX(-50%)}}
+.tick-chip{
+  display:flex;align-items:center;gap:.55rem;
+  background:var(--white);border:1px solid var(--border);
+  border-radius:4px;padding:.45rem 1.1rem;
+  font-size:.72rem;font-weight:600;color:var(--ink-soft);
+  white-space:nowrap;flex-shrink:0;
+  box-shadow:var(--shadow-g);
+}
+.tick-chip i{color:var(--gold);font-size:.7rem;}
+
+/* ══════════════════════════════════
+   FOOTER
+══════════════════════════════════ */
+footer{
+  background:var(--ink);
+  padding:64px 5% 32px;
+  position:relative;overflow:hidden;
+}
+footer::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,transparent,var(--gold),transparent);
+}
+.foot-inner{max-width:1300px;margin:0 auto;}
+.foot-grid{
+  display:grid;grid-template-columns:2fr 1fr 1fr 1fr;
+  gap:3rem;margin-bottom:3rem;
+}
+.foot-brand .f-logo{
+  display:flex;align-items:center;gap:.7rem;margin-bottom:.8rem;text-decoration:none;
+}
+.f-logo-gem{
+  width:36px;height:36px;border-radius:8px;
+  background:linear-gradient(135deg,var(--gold-deep),var(--gold));
+  display:flex;align-items:center;justify-content:center;
+  font-size:.85rem;color:var(--ink);
+}
+.f-logo-txt{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.35rem;font-weight:700;color:#fff;
+}
+.f-logo-txt span{color:var(--gold);}
+.f-desc{font-size:.83rem;color:rgba(255,255,255,.4);line-height:1.7;margin-bottom:1.2rem;}
+.f-socials{display:flex;gap:.6rem;}
+.f-soc{
+  width:36px;height:36px;border-radius:6px;
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);
+  display:flex;align-items:center;justify-content:center;
+  color:rgba(255,255,255,.4);font-size:.82rem;
+  transition:.2s;text-decoration:none;
+}
+.f-soc:hover{background:linear-gradient(135deg,var(--gold-deep),var(--gold));border-color:transparent;color:var(--ink);}
+.foot-col h5{
+  font-size:.72rem;font-weight:700;letter-spacing:.15em;
+  text-transform:uppercase;color:var(--gold);margin-bottom:1rem;
+}
+.foot-col ul{list-style:none;}
+.foot-col ul li{margin-bottom:.5rem;}
+.foot-col ul li a{font-size:.82rem;color:rgba(255,255,255,.4);transition:color .2s;}
+.foot-col ul li a:hover{color:var(--gold-light);}
+.foot-bottom{
+  border-top:1px solid rgba(255,255,255,.07);
+  padding-top:1.5rem;
+  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;
+}
+.f-copy{font-size:.76rem;color:rgba(255,255,255,.3);}
+.f-policies{display:flex;gap:1.5rem;}
+.f-policies a{font-size:.73rem;color:rgba(255,255,255,.3);transition:.2s;}
+.f-policies a:hover{color:var(--gold);}
+
+/* ══════════════════════════════════
+   WA FLOAT
+══════════════════════════════════ */
+.wa-float{
+  position:fixed;bottom:24px;right:24px;z-index:999;
+  width:58px;height:58px;border-radius:50%;
+  background:#25D366;
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.5rem;color:#fff;
+  box-shadow:0 4px 24px rgba(37,211,102,.4);
+  animation:wapop 2.5s ease infinite;
+  transition:transform .2s;
+}
+.wa-float:hover{transform:scale(1.1);}
+@keyframes wapop{0%,100%{box-shadow:0 4px 24px rgba(37,211,102,.4)}50%{box-shadow:0 4px 40px rgba(37,211,102,.7)}}
+
+/* ══════════════════════════════════
+   REVEAL ANIMATION
+══════════════════════════════════ */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .65s ease,transform .65s ease;}
+.reveal.vis{opacity:1;transform:none;}
+
+/* ══════════════════════════════════
+   RESPONSIVE — Mobile first
+══════════════════════════════════ */
+@media(max-width:1100px){
+  .hero-inner{grid-template-columns:1fr;gap:3rem;}
+  .hero-visual{display:none;}
+  .feat-block{grid-template-columns:1fr;}
+  .feat-showcase{display:none;}
+  .price-grid{grid-template-columns:repeat(2,1fr);}
+  .foot-grid{grid-template-columns:1fr 1fr;}
+  .strip-inner{grid-template-columns:repeat(2,1fr);}
+}
+@media(max-width:768px){
+  nav{display:none;}
+  .ham{display:flex;}
+  nav.open{
+    display:flex;flex-direction:column;
+    position:fixed;top:68px;left:0;width:100%;
+    background:var(--white);padding:1.5rem 5%;
+    border-bottom:1px solid var(--border);
+    box-shadow:0 8px 24px rgba(0,0,0,.08);
+    gap:.8rem;z-index:999;
+  }
+  nav.open a{font-size:1rem;padding:.5rem 0;border-bottom:1px solid var(--border);}
+  .hdr-btn{display:none;}
+  .how-grid{grid-template-columns:1fr 1fr;}
+  .how-grid::before{display:none;}
+  .ch-grid{grid-template-columns:1fr 1fr;}
+  .rev-grid{grid-template-columns:1fr;}
+  .faq-layout{grid-template-columns:1fr;}
+  .contact-layout{grid-template-columns:1fr;}
+  .dev-grid{grid-template-columns:repeat(4,1fr);}
+  .foot-grid{grid-template-columns:1fr;}
+  .foot-bottom{flex-direction:column;text-align:center;}
+  .tvb1,.tvb2,.tvb3,.tvb4{display:none;}
+  .hero-proof{gap:1rem;}
+  .proof-divider{display:none;}
+  section{padding:64px 5%;}
+}
+@media(max-width:500px){
+  .hero-btns{flex-direction:column;}
+  .hero-btns .btn{width:100%;justify-content:center;}
+  .price-grid{grid-template-columns:1fr;}
+  .how-grid{grid-template-columns:1fr;}
+  .strip-inner{grid-template-columns:1fr 1fr;}
+  .dev-grid{grid-template-columns:repeat(4,1fr);}
+  .ch-grid{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════
+     HEADER
+═══════════════════════════════ -->
+<header id="hdr">
+  <div class="logo-wrap">
+    <div class="logo-gem"><i class="fas fa-crown"></i></div>
+    <span class="logo-text">STRONG <span>8K</span> IPTV</span>
+  </div>
+  <nav id="nav">
+    <a href="#features">Features</a>
+    <a href="#pricing">Plans</a>
+    <a href="#channels">Channels</a>
+    <a href="#apps">Apps</a>
+    <a href="#how">Setup</a>
+    <a href="#testimonials">Reviews</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <a href="https://wa.me/212691336847" class="btn btn-gold hdr-btn" target="_blank"><i class="fab fa-whatsapp"></i> Free Trial</a>
+  <button class="ham" id="ham" aria-label="Menu"><span></span><span></span><span></span></button>
+</header>
+
+
+<!-- ═══════════════════════════════
+     HERO
+═══════════════════════════════ -->
+<section id="hero">
+  <!-- geometric decorations -->
+  <div class="hero-geo geo-ring gr1"></div>
+  <div class="hero-geo geo-ring gr2"></div>
+  <div class="hero-geo geo-ring gr3"></div>
+  <div class="geo-diag"></div>
+  <div class="geo-corner"></div>
+  <div class="geo-corner-bl"></div>
+
+  <div class="hero-inner">
+    <!-- LEFT: Copy -->
+    <div class="reveal">
+      <div class="hero-kicker"><span class="kicker-dot"></span> The World's Most Powerful IPTV</div>
+      <h1 class="hero-title display">
+        Experience<br>
+        True <span class="g-text">8K</span><br>
+        Streaming.
+      </h1>
+      <p class="hero-sub">
+        STRONG 8K IPTV delivers the sharpest picture ever seen on a screen — 20,000+ live channels, 60,000+ movies and series in breathtaking 8K / 4K / FHD quality. Zero compromise. Zero buffering.
+      </p>
+      <div class="hero-btns">
+        <a href="https://wa.me/212691336847" class="btn btn-gold" target="_blank"><i class="fab fa-whatsapp"></i> Start Free Trial</a>
+        <a href="#pricing" class="btn btn-outline"><i class="fas fa-layer-group"></i> View Plans</a>
+      </div>
+      <div class="hero-proof">
+        <div class="proof-stat">
+          <div class="proof-num g-text">20K+</div>
+          <div class="proof-lbl">Live Channels</div>
+        </div>
+        <div class="proof-divider"></div>
+        <div class="proof-stat">
+          <div class="proof-num g-text">60K+</div>
+          <div class="proof-lbl">Movies & Shows</div>
+        </div>
+        <div class="proof-divider"></div>
+        <div class="proof-stat">
+          <div class="proof-num g-text">8K</div>
+          <div class="proof-lbl">Ultra HD</div>
+        </div>
+        <div class="proof-divider"></div>
+        <div class="proof-stat">
+          <div class="proof-num g-text">99.9%</div>
+          <div class="proof-lbl">Uptime</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: TV Mockup -->
+    <div class="hero-visual reveal">
+      <!-- Floating badges -->
+      <div class="tv-badge tvb1">
+        <div class="badge-ico bi-gold"><i class="fas fa-crown"></i></div>
+        <div><div style="font-weight:700;font-size:.78rem">True 8K</div><div class="badge-sub">Ultra Resolution</div></div>
+      </div>
+      <div class="tv-badge tvb2">
+        <div class="badge-ico bi-green"><i class="fas fa-bolt"></i></div>
+        <div><div style="font-weight:700;font-size:.78rem">Zero Buffering</div><div class="badge-sub">99.9% Uptime</div></div>
+      </div>
+      <div class="tv-badge tvb3">
+        <div class="badge-ico bi-blue"><i class="fas fa-satellite-dish"></i></div>
+        <div><div style="font-weight:700;font-size:.78rem">20,000+ Channels</div><div class="badge-sub">Worldwide</div></div>
+      </div>
+      <div class="tv-badge tvb4">
+        <div class="badge-ico bi-red"><i class="fas fa-headset"></i></div>
+        <div><div style="font-weight:700;font-size:.78rem">24/7 Support</div><div class="badge-sub">WhatsApp</div></div>
+      </div>
+
+      <div class="tv-wrap">
+        <div class="tv-body">
+          <div class="tv-screen">
+            <div class="scr-bg"></div>
+            <div class="scr-ui">
+              <div class="scr-top-bar">
+                <div class="scr-logo">STRONG 8K IPTV</div>
+                <div class="scr-icons">
+                  <div class="scr-icon on"></div>
+                  <div class="scr-icon on"></div>
+                  <div class="scr-icon"></div>
+                </div>
+              </div>
+              <div class="scr-featured">
+                <div class="scr-feat-label">Now Streaming — Live</div>
+                <div class="scr-feat-title">Premier League · Matchday 32</div>
+                <div class="scr-play-btn"><i class="fas fa-play"></i> Watch Now</div>
+                <div class="scr-8k-badge">8K</div>
+              </div>
+              <div style="font-size:clamp(.35rem,.5vw,.5rem);color:rgba(201,168,76,.6);letter-spacing:.15em;text-transform:uppercase;margin-bottom:clamp(2px,0.5vw,6px);">Recommended Channels</div>
+              <div class="scr-grid">
+                <div class="scr-thumb st1"></div>
+                <div class="scr-thumb st2"></div>
+                <div class="scr-thumb st3"></div>
+                <div class="scr-thumb st4"></div>
+                <div class="scr-thumb st5"></div>
+                <div class="scr-thumb st6"></div>
+                <div class="scr-thumb st7"></div>
+                <div class="scr-thumb st8"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tv-stand"></div>
+        <div class="tv-base"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════
+     GOLD STATS STRIP
+═══════════════════════════════ -->
+<div class="gold-strip">
+  <div class="strip-inner">
+    <div class="strip-stat"><div class="ss-num">20,000+</div><div class="ss-lbl">Live TV Channels</div></div>
+    <div class="strip-stat"><div class="ss-num">60,000+</div><div class="ss-lbl">Movies & Series</div></div>
+    <div class="strip-stat"><div class="ss-num">8K / 4K</div><div class="ss-lbl">Ultra HD Quality</div></div>
+    <div class="strip-stat"><div class="ss-num">99.9%</div><div class="ss-lbl">Server Uptime</div></div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════
+     FEATURES
+═══════════════════════════════ -->
+<section id="features">
+  <div class="feat-block">
+    <div class="reveal">
+      <div class="eyebrow">Why Choose Us</div>
+      <h2 class="sh">Engineered for the<br><span class="g-text">Ultimate Experience</span></h2>
+      <p class="sdesc">STRONG 8K IPTV is built on premium infrastructure — delivering the clearest picture, fastest servers, and most complete channel library ever assembled.</p>
+      <div class="feat-grid">
+        <div class="feat-card">
+          <div class="feat-ico"><i class="fas fa-crown"></i></div>
+          <div><div class="feat-ttl">True 8K Ultra Resolution</div><p class="feat-txt">The only IPTV provider offering genuine 8K streaming — 33 million pixels of breathtaking clarity.</p></div>
+        </div>
+        <div class="feat-card">
+          <div class="feat-ico"><i class="fas fa-satellite-dish"></i></div>
+          <div><div class="feat-ttl">20,000+ Live TV Channels</div><p class="feat-txt">The world's largest IPTV channel library — USA, UK, Canada, Sports, Arabic, European and beyond.</p></div>
+        </div>
+        <div class="feat-card">
+          <div class="feat-ico"><i class="fas fa-bolt"></i></div>
+          <div><div class="feat-ttl">Zero Buffering Servers</div><p class="feat-txt">Enterprise-grade CDN with 99.9% uptime guarantee — instant channel switching, no lag, ever.</p></div>
+        </div>
+        <div class="feat-card">
+          <div class="feat-ico"><i class="fas fa-film"></i></div>
+          <div><div class="feat-ttl">60,000+ Movies & Series</div><p class="feat-txt">Massive on-demand library updated daily — every genre, every era, in 8K / 4K where available.</p></div>
+        </div>
+        <div class="feat-card">
+          <div class="feat-ico"><i class="fas fa-desktop"></i></div>
+          <div><div class="feat-ttl">Multi-Device Support</div><p class="feat-txt">Stream simultaneously on Smart TV, Firestick, phone, tablet, PC — up to 5 screens at once.</p></div>
+        </div>
+        <div class="feat-card">
+          <div class="feat-ico"><i class="fas fa-headset"></i></div>
+          <div><div class="feat-ttl">24/7 WhatsApp Support</div><p class="feat-txt">VIP concierge support available every hour of every day — average response under 5 minutes.</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="features-visual reveal">
+      <div class="feat-showcase">
+        <div class="fs-kicker">On Demand VOD Library</div>
+        <div class="fs-num g-text">60K+</div>
+        <div class="fs-label">Titles available on demand</div>
+        <div class="fs-grid">
+          <div class="fs-item"><i class="fas fa-film"></i><span>Action</span></div>
+          <div class="fs-item"><i class="fas fa-rocket"></i><span>Sci-Fi</span></div>
+          <div class="fs-item"><i class="fas fa-heart"></i><span>Romance</span></div>
+          <div class="fs-item"><i class="fas fa-futbol"></i><span>Sports</span></div>
+          <div class="fs-item"><i class="fas fa-child"></i><span>Kids</span></div>
+          <div class="fs-item"><i class="fas fa-globe"></i><span>World</span></div>
+        </div>
+      </div>
+      <div class="feat-float-card">
+        <div class="ffc-ico"><i class="fas fa-shield-alt"></i></div>
+        <div><div class="ffc-n">99.9%</div><div class="ffc-l">Uptime Guarantee</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════
+     HOW IT WORKS
+═══════════════════════════════ -->
+<section id="how">
+  <div class="sec-inner">
+    <div style="text-align:center;margin-bottom:3rem;" class="reveal">
+      <div class="eyebrow" style="justify-content:center;">Simple Setup</div>
+      <h2 class="sh" style="margin:0 auto .8rem;">Ready in <span class="g-text">4 Simple Steps</span></h2>
+      <p class="sdesc" style="margin:0 auto;">From purchase to streaming in under 5 minutes. No technical skills needed.</p>
+    </div>
+    <div class="how-grid reveal">
+      <div class="step-card">
+        <div class="step-num"><i class="fas fa-list-alt"></i></div>
+        <div class="step-ttl">Choose Your Plan</div>
+        <p class="step-txt">Browse our premium plans and select the subscription that suits your viewing needs.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num"><i class="fas fa-key"></i></div>
+        <div class="step-ttl">Receive Credentials</div>
+        <p class="step-txt">Get your M3U URL or Xtream codes delivered instantly via WhatsApp after payment.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num"><i class="fas fa-mobile-alt"></i></div>
+        <div class="step-ttl">Install IPTV App</div>
+        <p class="step-txt">Download any supported IPTV player on your device and enter your login details.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num"><i class="fas fa-play"></i></div>
+        <div class="step-ttl">Start Streaming</div>
+        <p class="step-txt">Access 20,000+ live channels and 60,000+ VOD in stunning 8K ultra resolution. Enjoy!</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════
+     MOVIE SLIDER
+═══════════════════════════════ -->
+<section id="movies">
+  <div class="sec-inner">
+    <div class="reveal">
+      <div class="eyebrow">VOD Library</div>
+      <h2 class="sh">Latest <span class="g-text">Movies & Series</span></h2>
+      <p class="sdesc">60,000+ on-demand titles — updated daily, available in 8K where broadcast permits.</p>
+    </div>
+    <div class="slider-outer reveal">
+      <button class="sl-btn sl-prev" id="slPrev"><i class="fas fa-chevron-left"></i></button>
+      <div class="slider-overflow"><div class="sl-track" id="slTrack">
+        <div class="movie-card m1"><div class="mc-bg"><div class="mc-badge">8K</div><div class="mc-genre">Action</div><div class="mc-title">The Last Empire</div></div></div>
+        <div class="movie-card m2"><div class="mc-bg"><div class="mc-badge">4K</div><div class="mc-genre">Crime</div><div class="mc-title">Shadow Protocol</div></div></div>
+        <div class="movie-card m3"><div class="mc-bg"><div class="mc-badge">8K</div><div class="mc-genre">Drama</div><div class="mc-title">Crown of Thorns</div></div></div>
+        <div class="movie-card m4"><div class="mc-bg"><div class="mc-badge">4K</div><div class="mc-genre">Documentary</div><div class="mc-title">Gold Standard</div></div></div>
+        <div class="movie-card m5"><div class="mc-bg"><div class="mc-badge">8K</div><div class="mc-genre">Thriller</div><div class="mc-title">Dark Kingdom</div></div></div>
+        <div class="movie-card m6"><div class="mc-bg"><div class="mc-badge">4K</div><div class="mc-genre">Sci-Fi</div><div class="mc-title">Horizon Zero</div></div></div>
+        <div class="movie-card m7"><div class="mc-bg"><div class="mc-badge">8K</div><div class="mc-genre">Adventure</div><div class="mc-title">Golden Voyage</div></div></div>
+        <div class="movie-card m8"><div class="mc-bg"><div class="mc-badge">4K</div><div class="mc-genre">Fantasy</div><div class="mc-title">Celestial War</div></div></div>
+        <div class="movie-card m9"><div class="mc-bg"><div class="mc-badge">8K</div><div class="mc-genre">Action</div><div class="mc-title">Iron Mandate</div></div></div>
+        <div class="movie-card m10"><div class="mc-bg"><div class="mc-badge">4K</div><div class="mc-genre">Mystery</div><div class="mc-title">Emerald Cipher</div></div></div>
+        <div class="movie-card m11"><div class="mc-bg"><div class="mc-badge">8K</div><div class="mc-genre">Crime</div><div class="mc-title">Red Nobility</div></div></div>
+        <div class="movie-card m12"><div class="mc-bg"><div class="mc-badge">4K</div><div class="mc-genre">Fantasy</div><div class="mc-title">Violet Dynasty</div></div></div>
+      </div></div>
+      <button class="sl-btn sl-next" id="slNext"><i class="fas fa-chevron-right"></i></button>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════
+     DEVICES
+═══════════════════════════════ -->
+<section id="devices">
+  <div class="sec-inner">
+    <div style="text-align:center;margin-bottom:3rem;" class="reveal">
+      <div class="eyebrow" style="justify-content:center;">Compatibility</div>
+      <h2 class="sh" style="margin:0 auto .8rem;">Watch on <span class="g-text">Any Device</span></h2>
+      <p class="sdesc" style="margin:0 auto;">STRONG 8K IPTV works on every screen you own — set up in minutes, anywhere in the world.</p>
+    </div>
+    <div class="dev-grid reveal">
+      <div class="dev-card"><div class="dev-ico"><i class="fas fa-tv"></i></div><div class="dev-name">Smart TV</div></div>
+      <div class="dev-card"><div class="dev-ico"><i class="fab fa-android"></i></div><div class="dev-name">Android TV</div></div>
+      <div class="dev-card"><div class="dev-ico"><i class="fas fa-fire"></i></div><div class="dev-name">Firestick</div></div>
+      <div class="dev-card"><div class="dev-ico"><i class="fab fa-apple"></i></div><div class="dev-name">iPhone</div></div>
+      <div class="dev-card"><div class="dev-ico"><i class="fas fa-tablet-alt"></i></div><div class="dev-name">iPad</div></div>
+      <div class="dev-card"><div class="dev-ico"><i class="fas fa-satellite"></i></div><div class="dev-name">MAG Box</div></div>
+      <div class="dev-card"><div class="dev-ico"><i class="fab fa-windows"></i></div><div class="dev-name">Windows PC</div></div>
+      <div class="dev-card"><div class="dev-ico"><i class="fab fa-apple"></i></div><div class="dev-name">macOS</div></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════
+     APPS SLIDER
+═══════════════════════════════ -->
+<section id="apps">
+  <div class="sec-inner">
+    <div class="reveal">
+      <div class="eyebrow">IPTV Players</div>
+      <h2 class="sh">Supported <span class="g-text">IPTV Apps</span></h2>
+      <p class="sdesc">Works with every major IPTV application — download, configure and stream in minutes.</p>
+    </div>
+    <div class="slider-outer reveal">
+      <button class="sl-btn sl-prev" id="apPrev"><i class="fas fa-chevron-left"></i></button>
+      <div class="slider-overflow"><div class="apps-rail" id="apTrack">
+        <div class="app-card"><div class="app-ico ai1"><i class="fas fa-play"></i></div><div class="app-name">TiviMate</div><a href="https://wa.me/212691336847" class="app-btn" target="_blank">Setup</a></div>
+        <div class="app-card"><div class="app-ico ai2"><i class="fas fa-signal"></i></div><div class="app-name">IPTV Smarters</div><a href="https://wa.me/212691336847" class="app-btn" target="_blank">Setup</a></div>
+        <div class="app-card"><div class="app-ico ai3"><i class="fas fa-broadcast-tower"></i></div><div class="app-name">XCIPTV</div><a href="https://wa.me/212691336847" class="app-btn" target="_blank">Setup</a></div>
+        <div class="app-card"><div class="app-ico ai4"><i class="fas fa-tv"></i></div><div class="app-name">IBO Player</div><a href="https://wa.me/212691336847" class="app-btn" target="_blank">Setup</a></div>
+        <div class="app-card"><div class="app-ico ai5"><i class="fas fa-satellite-dish"></i></div><div class="app-name">Smart IPTV</div><a href="https://wa.me/212691336847" class="app-btn" target="_blank">Setup</a></div>
+        <div class="app-card"><div class="app-ico ai6"><i class="fas fa-compass"></i></div><div class="app-name">OTT Navigator</div><a href="https://wa.me/212691336847" class="app-btn" target="_blank">Setup</a></div>
+        <div class="app-card"><div class="app-ico ai7"><i class="fas fa-film"></i></div><div class="app-name">Flix IPTV</div><a href="https://wa.me/212691336847" class="app-btn" target="_blank">Setup</a></div>
+        <div class="app-card"><div class="app-ico ai8"><i class="fas fa-stream"></i></div><div class="app-name">GSE Smart IPTV</div><a href="https://wa.me/212691336847" class="app-btn" target="_blank">Setup</a></div>
+        <div class="app-card"><div class="app-ico ai9"><i class="fas fa-network-wired"></i></div><div class="app-name">Net IPTV</div><a href="https://wa.me/212691336847" class="app-btn" target="_blank">Setup</a></div>
+        <div class="app-card"><div class="app-ico ai10"><i class="fas fa-medal"></i></div><div class="app-name">Perfect Player</div><a href="https://wa.me/212691336847" class="app-btn" target="_blank">Setup</a></div>
+      </div></div>
+      <button class="sl-btn sl-next" id="apNext"><i class="fas fa-chevron-right"></i></button>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════
+     PRICING
+═══════════════════════════════ -->
+<section id="pricing">
+  <div class="sec-inner">
+    <div style="text-align:center;margin-bottom:3rem;" class="reveal">
+      <div class="eyebrow" style="justify-content:center;">Subscription Plans</div>
+      <h2 class="sh" style="margin:0 auto .8rem;">Choose Your <span class="g-text">Premium Plan</span></h2>
+      <p class="sdesc" style="margin:0 auto;">All plans include full 8K access, complete VOD library, EPG guide, and 24/7 VIP support. No contracts.</p>
+    </div>
+    <div class="price-grid reveal">
+      <div class="price-card">
+        <div class="price-dur">1 <sub>Month</sub></div>
+        <div class="price-tag">Starter</div>
+        <div class="p-divider"></div>
+        <ul class="p-list">
+          <li><i class="fas fa-check-circle"></i>20,000+ Live Channels</li>
+          <li><i class="fas fa-check-circle"></i>60,000+ VOD Content</li>
+          <li><i class="fas fa-check-circle"></i>8K / 4K / FHD Quality</li>
+          <li><i class="fas fa-check-circle"></i>EPG TV Guide</li>
+          <li><i class="fas fa-check-circle"></i>24/7 Support</li>
+          <li><i class="fas fa-check-circle"></i>1 Device</li>
+        </ul>
+        <a href="https://wa.me/212691336847" class="btn btn-outline btn-full" target="_blank"><i class="fab fa-whatsapp"></i> Buy Now</a>
+      </div>
+      <div class="price-card">
+        <div class="price-dur">3 <sub>Months</sub></div>
+        <div class="price-tag">Value — Save 20%</div>
+        <div class="p-divider"></div>
+        <ul class="p-list">
+          <li><i class="fas fa-check-circle"></i>20,000+ Live Channels</li>
+          <li><i class="fas fa-check-circle"></i>60,000+ VOD Content</li>
+          <li><i class="fas fa-check-circle"></i>8K / 4K / FHD Quality</li>
+          <li><i class="fas fa-check-circle"></i>EPG TV Guide</li>
+          <li><i class="fas fa-check-circle"></i>24/7 Support</li>
+          <li><i class="fas fa-check-circle"></i>2 Devices</li>
+        </ul>
+        <a href="https://wa.me/212691336847" class="btn btn-outline btn-full" target="_blank"><i class="fab fa-whatsapp"></i> Buy Now</a>
+      </div>
+      <div class="price-card hot">
+        <div class="hot-tag">Popular</div>
+        <div class="price-dur">6 <sub>Months</sub></div>
+        <div class="price-tag">Premium — Save 40%</div>
+        <div class="p-divider"></div>
+        <ul class="p-list">
+          <li><i class="fas fa-check-circle"></i>20,000+ Live Channels</li>
+          <li><i class="fas fa-check-circle"></i>60,000+ VOD Content</li>
+          <li><i class="fas fa-check-circle"></i>8K / 4K / FHD Quality</li>
+          <li><i class="fas fa-check-circle"></i>EPG TV Guide</li>
+          <li><i class="fas fa-check-circle"></i>24/7 Priority Support</li>
+          <li><i class="fas fa-check-circle"></i>3 Devices</li>
+        </ul>
+        <a href="https://wa.me/212691336847" class="btn btn-gold btn-full" target="_blank"><i class="fab fa-whatsapp"></i> Buy Now</a>
+      </div>
+      <div class="price-card">
+        <div class="price-dur">12 <sub>Months</sub></div>
+        <div class="price-tag">Elite — Save 60%</div>
+        <div class="p-divider"></div>
+        <ul class="p-list">
+          <li><i class="fas fa-check-circle"></i>20,000+ Live Channels</li>
+          <li><i class="fas fa-check-circle"></i>60,000+ VOD Content</li>
+          <li><i class="fas fa-check-circle"></i>8K / 4K / FHD Quality</li>
+          <li><i class="fas fa-check-circle"></i>EPG TV Guide</li>
+          <li><i class="fas fa-check-circle"></i>24/7 VIP Support</li>
+          <li><i class="fas fa-check-circle"></i>5 Devices</li>
+        </ul>
+        <a href="https://wa.me/212691336847" class="btn btn-outline btn-full" target="_blank"><i class="fab fa-whatsapp"></i> Buy Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════
+     CHANNELS
+═══════════════════════════════ -->
+<section id="channels">
+  <div class="sec-inner">
+    <div class="reveal">
+      <div class="eyebrow">Channel Library</div>
+      <h2 class="sh">20,000+ <span class="g-text">Premium Channels</span></h2>
+      <p class="sdesc">The world's most complete IPTV channel list — every country, every category, every sport.</p>
+    </div>
+    <div class="ch-grid reveal">
+      <div class="ch-card"><div class="ch-em ce1">🇺🇸</div><div><div class="ch-name">USA Channels</div><div class="ch-cnt">4,000+ Channels</div></div></div>
+      <div class="ch-card"><div class="ch-em ce2">🇬🇧</div><div><div class="ch-name">UK Channels</div><div class="ch-cnt">1,200+ Channels</div></div></div>
+      <div class="ch-card"><div class="ch-em ce3">🇨🇦</div><div><div class="ch-name">Canada Channels</div><div class="ch-cnt">800+ Channels</div></div></div>
+      <div class="ch-card"><div class="ch-em ce4">⚽</div><div><div class="ch-name">Sports Channels</div><div class="ch-cnt">3,500+ Channels</div></div></div>
+      <div class="ch-card"><div class="ch-em ce5">🌙</div><div><div class="ch-name">Arabic Channels</div><div class="ch-cnt">2,000+ Channels</div></div></div>
+      <div class="ch-card"><div class="ch-em ce6">🇪🇺</div><div><div class="ch-name">European Channels</div><div class="ch-cnt">2,500+ Channels</div></div></div>
+      <div class="ch-card"><div class="ch-em ce7">🧸</div><div><div class="ch-name">Kids Channels</div><div class="ch-cnt">600+ Channels</div></div></div>
+      <div class="ch-card"><div class="ch-em ce8">🎬</div><div><div class="ch-name">Entertainment</div><div class="ch-cnt">4,000+ Channels</div></div></div>
+    </div>
+    <div style="text-align:center;margin-top:2.5rem;">
+      <a href="https://wa.me/212691336847" class="btn btn-gold" target="_blank"><i class="fab fa-whatsapp"></i> View Full Channel List</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════
+     TESTIMONIALS
+═══════════════════════════════ -->
+<section id="testimonials">
+  <div class="sec-inner">
+    <div style="text-align:center;margin-bottom:3rem;" class="reveal">
+      <div class="eyebrow" style="justify-content:center;">Client Reviews</div>
+      <h2 class="sh" style="margin:0 auto .8rem;">Words from Our <span class="g-text">Subscribers</span></h2>
+      <p class="sdesc" style="margin:0 auto;">Thousands of satisfied subscribers streaming in 8K every day.</p>
+    </div>
+    <div class="rev-grid reveal">
+      <div class="rev-card">
+        <div class="rev-stars">★★★★★</div>
+        <p class="rev-text">"The 8K quality on my new Samsung TV is absolutely jaw-dropping. I had no idea IPTV could look this good. The sports channels in ultra HD are a completely different experience."</p>
+        <div class="rev-meta"><div class="rev-av">M</div><div><div class="rev-name">Michael T.</div><div class="rev-loc">Toronto, Canada</div></div></div>
+      </div>
+      <div class="rev-card">
+        <div class="rev-stars">★★★★★</div>
+        <p class="rev-text">"I've tried every IPTV service out there. STRONG 8K is on a completely different level. Zero buffering, perfect picture, incredible channel selection. Worth every single cent."</p>
+        <div class="rev-meta"><div class="rev-av">S</div><div><div class="rev-name">Sarah K.</div><div class="rev-loc">Vancouver, BC</div></div></div>
+      </div>
+      <div class="rev-card">
+        <div class="rev-stars">★★★★★</div>
+        <p class="rev-text">"Set up was effortless and the WhatsApp support is incredibly fast. The picture quality genuinely made my family stop and ask what service this was. Simply stunning."</p>
+        <div class="rev-meta"><div class="rev-av">J</div><div><div class="rev-name">James R.</div><div class="rev-loc">Montreal, QC</div></div></div>
+      </div>
+      <div class="rev-card">
+        <div class="rev-stars">★★★★★</div>
+        <p class="rev-text">"The Arabic channels in 8K are extraordinary. My parents can finally watch their programs in the best quality possible. The support team helped us set up everything perfectly."</p>
+        <div class="rev-meta"><div class="rev-av">A</div><div><div class="rev-name">Ahmed B.</div><div class="rev-loc">Calgary, AB</div></div></div>
+      </div>
+      <div class="rev-card">
+        <div class="rev-stars">★★★★★</div>
+        <p class="rev-text">"60,000 movies and shows — I haven't even scratched the surface yet. The 8K movie experience feels like being in a private cinema. Absolutely elite service in every way."</p>
+        <div class="rev-meta"><div class="rev-av">L</div><div><div class="rev-name">Lisa M.</div><div class="rev-loc">Ottawa, ON</div></div></div>
+      </div>
+      <div class="rev-card">
+        <div class="rev-stars">★★★★★</div>
+        <p class="rev-text">"One year as a subscriber with zero issues. The server uptime is genuinely 99.9% — I've never experienced a drop during a live sports event. This is the gold standard of IPTV."</p>
+        <div class="rev-meta"><div class="rev-av">D</div><div><div class="rev-name">Daniel F.</div><div class="rev-loc">Edmonton, AB</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════
+     TICKER
+═══════════════════════════════ -->
+<div id="ticker">
+  <div class="tick-inner">
+    <div class="tick-chip"><i class="fas fa-tv"></i> Samsung 8K</div>
+    <div class="tick-chip"><i class="fas fa-tv"></i> LG OLED</div>
+    <div class="tick-chip"><i class="fas fa-tv"></i> Sony Bravia</div>
+    <div class="tick-chip"><i class="fas fa-fire"></i> Amazon Firestick</div>
+    <div class="tick-chip"><i class="fab fa-android"></i> Android TV</div>
+    <div class="tick-chip"><i class="fab fa-apple"></i> Apple TV 4K</div>
+    <div class="tick-chip"><i class="fas fa-satellite"></i> Nvidia Shield</div>
+    <div class="tick-chip"><i class="fas fa-satellite"></i> MAG Box</div>
+    <div class="tick-chip"><i class="fab fa-windows"></i> Windows PC</div>
+    <div class="tick-chip"><i class="fab fa-apple"></i> macOS</div>
+    <!-- duplicate for seamless loop -->
+    <div class="tick-chip"><i class="fas fa-tv"></i> Samsung 8K</div>
+    <div class="tick-chip"><i class="fas fa-tv"></i> LG OLED</div>
+    <div class="tick-chip"><i class="fas fa-tv"></i> Sony Bravia</div>
+    <div class="tick-chip"><i class="fas fa-fire"></i> Amazon Firestick</div>
+    <div class="tick-chip"><i class="fab fa-android"></i> Android TV</div>
+    <div class="tick-chip"><i class="fab fa-apple"></i> Apple TV 4K</div>
+    <div class="tick-chip"><i class="fas fa-satellite"></i> Nvidia Shield</div>
+    <div class="tick-chip"><i class="fas fa-satellite"></i> MAG Box</div>
+    <div class="tick-chip"><i class="fab fa-windows"></i> Windows PC</div>
+    <div class="tick-chip"><i class="fab fa-apple"></i> macOS</div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════
+     FAQ
+═══════════════════════════════ -->
+<section id="faq">
+  <div class="sec-inner">
+    <div class="faq-layout">
+      <div class="reveal">
+        <div class="eyebrow">FAQ</div>
+        <h2 class="sh">Common <span class="g-text">Questions</span></h2>
+        <p class="sdesc">Everything you need to know before you start streaming in 8K.</p>
+        <div class="faq-stack">
+          <div class="faq-item"><div class="faq-q">Is STRONG 8K IPTV legal? <i class="fas fa-chevron-down"></i></div><div class="faq-ans"><p>IPTV technology is completely legal. The legality depends on the specific content you access. We provide connection services to publicly available streams. Please verify content regulations in your specific region before subscribing.</p></div></div>
+          <div class="faq-item"><div class="faq-q">What devices support 8K streaming? <i class="fas fa-chevron-down"></i></div><div class="faq-ans"><p>8K streaming requires an 8K-capable TV and sufficient internet speed (at least 100Mbps recommended). For standard 4K/FHD, any Smart TV, Firestick, iPhone, iPad, Android device, Windows PC, Mac, or MAG box works perfectly.</p></div></div>
+          <div class="faq-item"><div class="faq-q">Do you offer free trials? <i class="fas fa-chevron-down"></i></div><div class="faq-ans"><p>Absolutely. We offer complimentary trial periods so you can experience the 8K quality difference before committing. Contact us via WhatsApp and we'll set you up with a full trial immediately.</p></div></div>
+          <div class="faq-item"><div class="faq-q">How quickly will I receive my account? <i class="fas fa-chevron-down"></i></div><div class="faq-ans"><p>Account delivery is instant — typically within minutes of payment confirmation. Our team operates 24 hours a day, 7 days a week to ensure you're streaming as fast as possible.</p></div></div>
+          <div class="faq-item"><div class="faq-q">What internet speed do I need for 8K? <i class="fas fa-chevron-down"></i></div><div class="faq-ans"><p>For 8K streaming we recommend a minimum of 80–100 Mbps. For 4K, 25 Mbps is sufficient. For HD/FHD, 10 Mbps works perfectly. Our adaptive streaming adjusts automatically to your connection speed.</p></div></div>
+          <div class="faq-item"><div class="faq-q">Do you provide installation support? <i class="fas fa-chevron-down"></i></div><div class="faq-ans"><p>Yes — our 24/7 WhatsApp team will guide you through installation step-by-step on any device. We offer both text tutorials and live video assistance. Average setup time is under 5 minutes.</p></div></div>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="faq-aside">
+          <div class="fa-ico"><i class="fab fa-whatsapp"></i></div>
+          <div class="fa-title">Still Have Questions?</div>
+          <p class="fa-sub">Our VIP support team is available 24/7 via WhatsApp — get instant answers and setup help from real human experts.</p>
+          <a href="https://wa.me/212691336847" class="btn btn-gold" style="width:100%;justify-content:center;" target="_blank"><i class="fab fa-whatsapp"></i> Chat With Us Now</a>
+          <p class="fa-resp">Average response: <strong>under 5 minutes</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════
+     CONTACT
+═══════════════════════════════ -->
+<section id="contact">
+  <div class="sec-inner">
+    <div class="contact-layout">
+      <div class="reveal">
+        <div class="eyebrow">Get In Touch</div>
+        <h2 class="sh">Need Assistance?<br><span class="g-text">Contact Us</span></h2>
+        <p class="sdesc">Our dedicated VIP support team is on standby around the clock — 24 hours, 7 days a week, 365 days a year.</p>
+        <div class="contact-items">
+          <div class="c-item"><div class="c-ico"><i class="fas fa-envelope"></i></div><div><div class="c-lbl">Email Address</div><div class="c-val">theproelk@gmail.com</div></div></div>
+          <div class="c-item"><div class="c-ico"><i class="fab fa-whatsapp"></i></div><div><div class="c-lbl">WhatsApp</div><div class="c-val">+212 691-336847</div></div></div>
+          <div class="c-item"><div class="c-ico"><i class="fas fa-clock"></i></div><div><div class="c-lbl">Support Hours</div><div class="c-val">24/7 — Always Online</div></div></div>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="contact-box">
+          <div class="wa-circle"><i class="fab fa-whatsapp"></i></div>
+          <div class="cb-title">Chat on WhatsApp</div>
+          <p class="cb-sub">Start a free trial, ask questions, or get step-by-step 8K setup assistance — our team responds in under 5 minutes.</p>
+          <a href="https://wa.me/212691336847" class="btn btn-wa" style="width:100%;justify-content:center;" target="_blank"><i class="fab fa-whatsapp"></i> Start WhatsApp Chat</a>
+          <p class="cb-note">Powered by 4KIPTVS.NET · Khalid</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════
+     FOOTER
+═══════════════════════════════ -->
+<footer>
+  <div class="foot-inner">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="#" class="f-logo">
+          <div class="f-logo-gem"><i class="fas fa-crown"></i></div>
+          <span class="f-logo-txt">STRONG <span>8K</span> IPTV</span>
+        </a>
+        <p class="f-desc">The world's most powerful IPTV service — 20,000+ live channels and 60,000+ movies in true 8K / 4K quality. Built by 4KIPTVS.NET, powered by Khalid.</p>
+        <div class="f-socials">
+          <a href="#" class="f-soc"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="f-soc"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="f-soc"><i class="fab fa-telegram"></i></a>
+          <a href="https://wa.me/212691336847" class="f-soc" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="foot-col">
+        <h5>Navigation</h5>
+        <ul>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#pricing">Plans & Pricing</a></li>
+          <li><a href="#channels">Channels</a></li>
+          <li><a href="#devices">Devices</a></li>
+          <li><a href="#testimonials">Reviews</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h5>Support</h5>
+        <ul>
+          <li><a href="#how">Setup Guide</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#apps">IPTV Apps</a></li>
+          <li><a href="https://wa.me/212691336847" target="_blank">Live Chat</a></li>
+          <li><a href="mailto:theproelk@gmail.com">Email Us</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h5>Legal</h5>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Refund Policy</a></li>
+          <li><a href="#">Cookie Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <p class="f-copy">© 2025 4KIPTVS.NET — All Rights Reserved. STRONG 8K IPTV by Khalid.</p>
+      <div class="f-policies">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Refund</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- WA FLOAT -->
+<a href="https://wa.me/212691336847" class="wa-float" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+
+<!-- ═══════════════════════════════
+     JAVASCRIPT — Lightweight & lag-free
+═══════════════════════════════ -->
+<script>
+(function(){
+  'use strict';
+
+  /* ─ Header scroll ─ */
+  const hdr = document.getElementById('hdr');
+  let ticking = false;
+  window.addEventListener('scroll', function(){
+    if(!ticking){
+      requestAnimationFrame(function(){
+        hdr.classList.toggle('on', window.scrollY > 40);
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }, {passive:true});
+
+  /* ─ Hamburger ─ */
+  document.getElementById('ham').addEventListener('click', function(){
+    document.getElementById('nav').classList.toggle('open');
+  });
+
+  /* ─ Scroll Reveal — IntersectionObserver (no layout thrash) ─ */
+  const ro = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        e.target.classList.add('vis');
+        ro.unobserve(e.target);
+      }
+    });
+  }, {threshold: 0.08, rootMargin:'0px 0px -40px 0px'});
+
+  document.querySelectorAll('.reveal').forEach(function(el){ ro.observe(el); });
+
+  /* Stagger grid children */
+  [
+    '.feat-grid .feat-card',
+    '.how-grid .step-card',
+    '.dev-grid .dev-card',
+    '.price-grid .price-card',
+    '.ch-grid .ch-card',
+    '.rev-grid .rev-card'
+  ].forEach(function(sel){
+    document.querySelectorAll(sel).forEach(function(el, i){
+      el.style.transitionDelay = (i * 0.07) + 's';
+      el.classList.add('reveal');
+      ro.observe(el);
+    });
+  });
+
+  /* ─ Slider factory — RAF-based, no jank ─ */
+  function makeSlider(trackId, prevId, nextId, itemW, gap){
+    var track = document.getElementById(trackId);
+    var prev  = document.getElementById(prevId);
+    var next  = document.getElementById(nextId);
+    if(!track || !prev || !next) return;
+    var pos  = 0;
+    var step = (itemW + gap) * 3;
+
+    function clamp(v){
+      var min = -(track.scrollWidth - track.parentElement.clientWidth);
+      return Math.min(0, Math.max(min, v));
+    }
+    function go(delta){
+      pos = clamp(pos + delta);
+      track.style.transform = 'translateX(' + pos + 'px)';
+    }
+    next.addEventListener('click', function(){ go(-step); });
+    prev.addEventListener('click', function(){ go( step); });
+
+    /* touch support */
+    var startX = 0;
+    track.addEventListener('touchstart', function(e){ startX = e.touches[0].clientX; }, {passive:true});
+    track.addEventListener('touchend',   function(e){
+      var dx = e.changedTouches[0].clientX - startX;
+      if(Math.abs(dx) > 40) go(dx > 0 ? step : -step);
+    }, {passive:true});
+  }
+
+  makeSlider('slTrack','slPrev','slNext', 155, 14);
+  makeSlider('apTrack','apPrev','apNext', 165, 14);
+
+  /* ─ FAQ accordion ─ */
+  document.querySelectorAll('.faq-q').forEach(function(q){
+    q.addEventListener('click', function(){
+      var item = q.parentElement;
+      var open = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(function(i){ i.classList.remove('open'); });
+      if(!open) item.classList.add('open');
+    });
+  });
+
+})();
+</script>
+</body>
+</html>
